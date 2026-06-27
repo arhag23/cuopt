@@ -183,7 +183,7 @@ void extract_probing_implied_bounds(const problem_t<i_t, f_t>& op_problem,
     }
   }
 
-  CUOPT_LOG_INFO("Probing implied bounds: %d zero entries, %d one entries", zero_nnz, one_nnz);
+  CUOPT_LOG_INFO("\nProbing implied bounds: %d zero entries, %d one entries", zero_nnz, one_nnz);
 }
 
 template <typename i_t, typename f_t>
