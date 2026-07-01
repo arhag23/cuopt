@@ -1,11 +1,13 @@
 /* clang-format off */
 /*
- * SPDX-FileCopyrightText: Copyright (c) 2025, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+ * SPDX-FileCopyrightText: Copyright (c) 2025-2026, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
  * SPDX-License-Identifier: Apache-2.0
  */
 /* clang-format on */
 
 #pragma once
+
+#include <cuopt/export.hpp>
 
 #include <cuopt/logger_macros.hpp>
 
@@ -17,7 +19,7 @@
 #include <string>
 #include <vector>
 
-namespace cuopt {
+namespace CUOPT_EXPORT cuopt {
 
 /**
  * @brief Get the default logger.
@@ -42,4 +44,4 @@ class init_logger_t {
   init_logger_t(std::string log_file, bool log_to_console);
 };
 
-}  // namespace cuopt
+}  // namespace CUOPT_EXPORT cuopt

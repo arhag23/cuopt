@@ -1571,9 +1571,11 @@ mps_data_model_t<i_t, f_t> read_lp_from_string(std::string_view lp_contents)
   return problem;
 }
 
-template mps_data_model_t<int, float> read_lp<int, float>(const std::string&);
-template mps_data_model_t<int, double> read_lp<int, double>(const std::string&);
-template mps_data_model_t<int, float> read_lp_from_string<int, float>(std::string_view);
-template mps_data_model_t<int, double> read_lp_from_string<int, double>(std::string_view);
+template CUOPT_EXPORT mps_data_model_t<int, float> read_lp<int, float>(const std::string&);
+template CUOPT_EXPORT mps_data_model_t<int, double> read_lp<int, double>(const std::string&);
+template CUOPT_EXPORT mps_data_model_t<int, float> read_lp_from_string<int, float>(
+  std::string_view);
+template CUOPT_EXPORT mps_data_model_t<int, double> read_lp_from_string<int, double>(
+  std::string_view);
 
 }  // namespace cuopt::mathematical_optimization::io

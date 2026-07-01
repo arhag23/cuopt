@@ -7,13 +7,17 @@
 
 #pragma once
 
+#include <cuopt/export.hpp>
+
 #include <cstdint>
 #include <span>
 #include <string>
 #include <type_traits>
 #include <vector>
 
-namespace cuopt::mathematical_optimization::io {
+namespace cuopt {
+namespace CUOPT_EXPORT mathematical_optimization {
+namespace io {
 
 /**
  * @brief A representation of a linear programming (LP) optimization problem
@@ -385,4 +389,6 @@ class mps_data_model_t {
 
 };  // class mps_data_model_t
 
-}  // namespace cuopt::mathematical_optimization::io
+}  // namespace io
+}  // namespace CUOPT_EXPORT mathematical_optimization
+}  // namespace cuopt

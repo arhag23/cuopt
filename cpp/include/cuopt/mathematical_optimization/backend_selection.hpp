@@ -7,7 +7,10 @@
 
 #pragma once
 
-namespace cuopt::mathematical_optimization {
+#include <cuopt/export.hpp>
+
+namespace cuopt {
+namespace CUOPT_EXPORT mathematical_optimization {
 
 /**
  * @brief Enum for execution mode (local vs remote solve)
@@ -61,4 +64,5 @@ bool use_cpu_memory_for_local();
  */
 memory_backend_t get_memory_backend_type();
 
-}  // namespace cuopt::mathematical_optimization
+}  // namespace CUOPT_EXPORT mathematical_optimization
+}  // namespace cuopt

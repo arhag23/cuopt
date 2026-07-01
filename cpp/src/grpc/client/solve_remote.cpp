@@ -280,10 +280,10 @@ std::unique_ptr<mip_solution_interface_t<i_t, f_t>> solve_mip_remote(
 }
 
 // Explicit template instantiations for remote execution stubs
-template std::unique_ptr<lp_solution_interface_t<int, double>> solve_lp_remote(
+template CUOPT_EXPORT std::unique_ptr<lp_solution_interface_t<int, double>> solve_lp_remote(
   cpu_optimization_problem_t<int, double> const&, pdlp_solver_settings_t<int, double> const&);
 
-template std::unique_ptr<mip_solution_interface_t<int, double>> solve_mip_remote(
+template CUOPT_EXPORT std::unique_ptr<mip_solution_interface_t<int, double>> solve_mip_remote(
   cpu_optimization_problem_t<int, double> const&, mip_solver_settings_t<int, double> const&);
 
 }  // namespace cuopt::mathematical_optimization

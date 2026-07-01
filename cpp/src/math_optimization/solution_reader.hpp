@@ -7,10 +7,13 @@
 
 #pragma once
 
+#include <cuopt/export.hpp>
+
 #include <string>
 #include <vector>
 
-namespace cuopt::mathematical_optimization {
+namespace cuopt {
+namespace CUOPT_EXPORT mathematical_optimization {
 
 /**
  * @brief Reads a solution file and returns the values of specified variables
@@ -24,4 +27,5 @@ class solution_reader_t {
   static std::vector<double> get_variable_values_from_sol_file(
     const std::string& sol_file_path, const std::vector<std::string>& variable_names);
 };
-}  // namespace cuopt::mathematical_optimization
+}  // namespace CUOPT_EXPORT mathematical_optimization
+}  // namespace cuopt
